@@ -82,8 +82,62 @@ extension UITextField {
     
 }
 
+extension UITextView {
+    
+    @nonobjc func config(fontSize: CGFloat, fontWeight: CGFloat, textColor: UIColor) -> Self {
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
+        self.textColor = textColor
+        return self
+    }
+}
+
 extension UIImageView {
     
+    @nonobjc func config(image: UIImage) -> Self {
+        self.image = image
+        return self
+    }
+    
+}
+
+
+extension UIButton {
+    
+    @nonobjc func config(target: AnyObject, selector: Selector, for event: UIControlEvents = .touchUpInside) -> Self {
+        self.addTarget(self, action: selector, for: event)
+        return self
+    }
+    
+    @nonobjc func configTitle(titleText: String, fontSize: CGFloat, fontWeight: CGFloat, textColor: UIColor) -> Self {
+        self.setTitle(titleText, for: .normal)
+        self.setTitleColor(textColor, for: .normal)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
+        return self
+    }
+    
+    @nonobjc func configImage(image: UIImage) -> Self {
+        self.setImage(image, for: .normal)
+        return self
+    }
+
+}
+
+extension UISwitch {
+    
+    @nonobjc func config(target: AnyObject, selector: Selector) -> Self {
+        // Apperance properties don't need to adjustable.
+        self.addTarget(target, action: selector, for: .valueChanged)
+        self.tintColor = UIColor(white: 0.72, alpha: 1)
+        self.onTintColor = UIColor(red: 1, green: 0.267, blue: 0.274, alpha: 1)
+        self.backgroundColor = UIColor(white: 0.72, alpha: 1)
+        return self
+    }
+}
+
+extension UIViewController {
+    func wrapToNav<T: UINavigationController>() -> T {
+        return T.self.init(rootViewController: self)
+    }
 }
 
 

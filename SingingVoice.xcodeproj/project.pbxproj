@@ -16,6 +16,7 @@
 		BFF4F7001D9933AA0034093A /* SingingVoiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F6FF1D9933AA0034093A /* SingingVoiceUITests.swift */; };
 		BFF4F70E1D9935420034093A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F70D1D9935420034093A /* Podfile */; };
 		BFF4F7151D9940900034093A /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F7141D9940900034093A /* UIFactory.swift */; };
+		BFF4F71B1D995BCB0034093A /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F71A1D995BCB0034093A /* AppManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BFF4F70D1D9935420034093A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BFF4F70F1D9937C60034093A /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		BFF4F7141D9940900034093A /* UIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFactory.swift; path = Views/Utils/UIFactory.swift; sourceTree = "<group>"; };
+		BFF4F71A1D995BCB0034093A /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppManager.swift; path = Views/AppManager/AppManager.swift; sourceTree = "<group>"; };
 		E60EBBCEF6D2A8AED26A70FE /* Pods-SingingVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingingVoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingingVoice/Pods-SingingVoice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,8 @@
 		BFF4F7111D9939DB0034093A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFF4F7191D995BB00034093A /* AppManager */,
+				BFF4F7181D995B690034093A /* AccountManagement */,
 				BFF4F7131D9940540034093A /* Utils */,
 			);
 			name = Views;
@@ -184,6 +188,21 @@
 				BFF4F7141D9940900034093A /* UIFactory.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		BFF4F7181D995B690034093A /* AccountManagement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AccountManagement;
+			sourceTree = "<group>";
+		};
+		BFF4F7191D995BB00034093A /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				BFF4F71A1D995BCB0034093A /* AppManager.swift */,
+			);
+			name = AppManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +399,7 @@
 				BFF4F6E51D9933AA0034093A /* SingingVoice.xcdatamodeld in Sources */,
 				BFF4F6E21D9933AA0034093A /* AppDelegate.swift in Sources */,
 				BFF4F7151D9940900034093A /* UIFactory.swift in Sources */,
+				BFF4F71B1D995BCB0034093A /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
