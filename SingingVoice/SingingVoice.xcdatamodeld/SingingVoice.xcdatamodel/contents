@@ -1,4 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BaseModel" syncable="YES">
+        <attribute name="svid" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Comment" parentEntity="BaseModel" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="image" attributeType="String" syncable="YES"/>
+        <attribute name="liked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="likeNum" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="comments" inverseEntity="Message" syncable="YES"/>
+        <relationship name="status" maxCount="1" deletionRule="Nullify" destinationEntity="Status" inverseName="comments" inverseEntity="Status" syncable="YES"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="comments" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Message" parentEntity="BaseModel" syncable="YES">
+        <attribute name="checked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="creatdAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="flag" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBody" attributeType="String" syncable="YES"/>
+        <attribute name="messageType" attributeType="String" syncable="YES"/>
+        <attribute name="namespace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="operationAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="read" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="comments" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="messages" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="source" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="messages" inverseEntity="User" syncable="YES"/>
+        <relationship name="status" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Status" inverseName="messages" inverseEntity="Status" syncable="YES"/>
+    </entity>
+    <entity name="Status" parentEntity="BaseModel" syncable="YES">
+        <attribute name="commentNum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cover" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lat" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="liked" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="likeNum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="locDes" attributeType="String" syncable="YES"/>
+        <attribute name="lon" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="voice" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Comment" inverseName="status" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="status" inverseEntity="Message" syncable="YES"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="status" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" parentEntity="BaseModel" syncable="YES">
+        <attribute name="avatar" attributeType="String" syncable="YES"/>
+        <attribute name="commentNum" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fansNum" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="followed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="followsNum" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gender" attributeType="String" syncable="YES"/>
+        <attribute name="nickName" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNum" attributeType="String" minValueString="10" maxValueString="20" indexed="YES" syncable="YES"/>
+        <attribute name="signature" attributeType="String" syncable="YES"/>
+        <attribute name="statusNum" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Comment" inverseName="user" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="source" inverseEntity="Message" syncable="YES"/>
+        <relationship name="status" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Status" inverseName="user" inverseEntity="Status" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BaseModel" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="User" positionX="-54" positionY="0" width="128" height="240"/>
+        <element name="Status" positionX="-36" positionY="81" width="128" height="225"/>
+        <element name="Comment" positionX="-18" positionY="144" width="128" height="150"/>
+        <element name="Message" positionX="0" positionY="162" width="128" height="210"/>
+    </elements>
 </model>

@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A05A8E8BE32CE7D2AC5B3BB /* Pods_SingingVoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E25B5347D8C03F31C13D66 /* Pods_SingingVoice.framework */; };
 		BFF4F6E21D9933AA0034093A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F6E11D9933AA0034093A /* AppDelegate.swift */; };
 		BFF4F6E51D9933AA0034093A /* SingingVoice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F6E31D9933AA0034093A /* SingingVoice.xcdatamodeld */; };
 		BFF4F6E71D9933AA0034093A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F6E61D9933AA0034093A /* Assets.xcassets */; };
 		BFF4F6EA1D9933AA0034093A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F6E81D9933AA0034093A /* LaunchScreen.storyboard */; };
 		BFF4F6F51D9933AA0034093A /* SingingVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F6F41D9933AA0034093A /* SingingVoiceTests.swift */; };
 		BFF4F7001D9933AA0034093A /* SingingVoiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F6FF1D9933AA0034093A /* SingingVoiceUITests.swift */; };
+		BFF4F70E1D9935420034093A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BFF4F70D1D9935420034093A /* Podfile */; };
+		BFF4F7151D9940900034093A /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4F7141D9940900034093A /* UIFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2389DF1531F4D7EC29F2FA51 /* Pods-SingingVoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingingVoice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingingVoice/Pods-SingingVoice.debug.xcconfig"; sourceTree = "<group>"; };
+		29E25B5347D8C03F31C13D66 /* Pods_SingingVoice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingingVoice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF4F6DE1D9933AA0034093A /* SingingVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingingVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF4F6E11D9933AA0034093A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF4F6E41D9933AA0034093A /* SingingVoice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingingVoice.xcdatamodel; sourceTree = "<group>"; };
@@ -45,6 +50,10 @@
 		BFF4F6FB1D9933AA0034093A /* SingingVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingingVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF4F6FF1D9933AA0034093A /* SingingVoiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingingVoiceUITests.swift; sourceTree = "<group>"; };
 		BFF4F7011D9933AA0034093A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF4F70D1D9935420034093A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BFF4F70F1D9937C60034093A /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		BFF4F7141D9940900034093A /* UIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFactory.swift; path = Views/Utils/UIFactory.swift; sourceTree = "<group>"; };
+		E60EBBCEF6D2A8AED26A70FE /* Pods-SingingVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingingVoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingingVoice/Pods-SingingVoice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A05A8E8BE32CE7D2AC5B3BB /* Pods_SingingVoice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,13 +82,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		367AD7ADBE92F14B844E6FAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29E25B5347D8C03F31C13D66 /* Pods_SingingVoice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DB60264C5290C4F3A25FAC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2389DF1531F4D7EC29F2FA51 /* Pods-SingingVoice.debug.xcconfig */,
+				E60EBBCEF6D2A8AED26A70FE /* Pods-SingingVoice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BFF4F6D51D9933AA0034093A = {
 			isa = PBXGroup;
 			children = (
+				BFF4F70F1D9937C60034093A /* bridge.h */,
+				BFF4F70D1D9935420034093A /* Podfile */,
 				BFF4F6E01D9933AA0034093A /* SingingVoice */,
 				BFF4F6F31D9933AA0034093A /* SingingVoiceTests */,
 				BFF4F6FE1D9933AA0034093A /* SingingVoiceUITests */,
 				BFF4F6DF1D9933AA0034093A /* Products */,
+				8DB60264C5290C4F3A25FAC4 /* Pods */,
+				367AD7ADBE92F14B844E6FAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +126,9 @@
 		BFF4F6E01D9933AA0034093A /* SingingVoice */ = {
 			isa = PBXGroup;
 			children = (
+				BFF4F7121D9939E00034093A /* Utils */,
+				BFF4F7111D9939DB0034093A /* Views */,
+				BFF4F7101D9939D10034093A /* Model */,
 				BFF4F6E11D9933AA0034093A /* AppDelegate.swift */,
 				BFF4F6E61D9933AA0034093A /* Assets.xcassets */,
 				BFF4F6E81D9933AA0034093A /* LaunchScreen.storyboard */,
@@ -122,6 +156,36 @@
 			path = SingingVoiceUITests;
 			sourceTree = "<group>";
 		};
+		BFF4F7101D9939D10034093A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BFF4F7111D9939DB0034093A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF4F7131D9940540034093A /* Utils */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BFF4F7121D9939E00034093A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		BFF4F7131D9940540034093A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BFF4F7141D9940900034093A /* UIFactory.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFF4F7041D9933AA0034093A /* Build configuration list for PBXNativeTarget "SingingVoice" */;
 			buildPhases = (
+				9631533371F0322590B9CDEA /* [CP] Check Pods Manifest.lock */,
 				BFF4F6DA1D9933AA0034093A /* Sources */,
 				BFF4F6DB1D9933AA0034093A /* Frameworks */,
 				BFF4F6DC1D9933AA0034093A /* Resources */,
+				015141EE1ABC94189A257483 /* [CP] Embed Pods Frameworks */,
+				5AC19189859C1418CF60975A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,17 +258,20 @@
 					BFF4F6DD1D9933AA0034093A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F6Q2CCPKZ9;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					BFF4F6EF1D9933AA0034093A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F6Q2CCPKZ9;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BFF4F6DD1D9933AA0034093A;
 					};
 					BFF4F6FA1D9933AA0034093A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F6Q2CCPKZ9;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BFF4F6DD1D9933AA0034093A;
 					};
@@ -232,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF4F70E1D9935420034093A /* Podfile in Resources */,
 				BFF4F6E71D9933AA0034093A /* Assets.xcassets in Resources */,
 				BFF4F6EA1D9933AA0034093A /* LaunchScreen.storyboard in Resources */,
 			);
@@ -253,6 +324,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		015141EE1ABC94189A257483 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingingVoice/Pods-SingingVoice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AC19189859C1418CF60975A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingingVoice/Pods-SingingVoice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9631533371F0322590B9CDEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFF4F6DA1D9933AA0034093A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,6 +379,7 @@
 			files = (
 				BFF4F6E51D9933AA0034093A /* SingingVoice.xcdatamodeld in Sources */,
 				BFF4F6E21D9933AA0034093A /* AppDelegate.swift in Sources */,
+				BFF4F7151D9940900034093A /* UIFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +519,7 @@
 		};
 		BFF4F7051D9933AA0034093A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2389DF1531F4D7EC29F2FA51 /* Pods-SingingVoice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F6Q2CCPKZ9;
@@ -406,12 +527,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woody.SingingVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		BFF4F7061D9933AA0034093A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E60EBBCEF6D2A8AED26A70FE /* Pods-SingingVoice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F6Q2CCPKZ9;
@@ -419,6 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woody.SingingVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -500,6 +624,7 @@
 				BFF4F7061D9933AA0034093A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFF4F7071D9933AA0034093A /* Build configuration list for PBXNativeTarget "SingingVoiceTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +633,7 @@
 				BFF4F7091D9933AA0034093A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFF4F70A1D9933AA0034093A /* Build configuration list for PBXNativeTarget "SingingVoiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +642,7 @@
 				BFF4F70C1D9933AA0034093A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
