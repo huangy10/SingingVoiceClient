@@ -8,4 +8,7 @@ target 'SingingVoice' do
     pod 'SnapKit', '~> 3.0'
     pod 'BaiduMapKit'
     pod 'Kingfisher'
+    pod 'AlecrimCoreData', :git => 'https://github.com/AnthonyMDev/AlecrimCoreData.git', :branch => 'swift-3.0'
+    pod 'Dollar', '~> 6.0.0'
+    pod 'Cent'
 end
